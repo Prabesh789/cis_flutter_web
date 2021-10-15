@@ -7,6 +7,7 @@ import 'package:google_fonts/google_fonts.dart';
 class RegisterCard extends StatefulHookWidget {
   const RegisterCard({
     Key? key,
+    required this.registered,
     // required this.onPressed,
     // required this.nameController,
     // required this.emailController,
@@ -18,6 +19,7 @@ class RegisterCard extends StatefulHookWidget {
   // final TextEditingController emailController;
   // final TextEditingController addressController;
   // final TextEditingController passwordController;
+  final bool registered;
 
   @override
   _RegisterCardState createState() => _RegisterCardState();
