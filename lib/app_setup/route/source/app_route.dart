@@ -1,5 +1,6 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:cis_project/features/auth/presentation/auth_screen.dart';
+import 'package:cis_project/features/dashboard/presentation/dashboard_screen.dart';
 import 'package:cis_project/features/splash_screen/splash_screen.dart';
 
 @MaterialAutoRouter(
@@ -12,6 +13,9 @@ import 'package:cis_project/features/splash_screen/splash_screen.dart';
     AutoRoute<void>(
       page: AuthScreen,
     ),
+    AutoRoute<void>(
+      page: DashboardScreen,
+    )
   ],
   preferRelativeImports: true,
   replaceInRouteName: 'Screen,Route',

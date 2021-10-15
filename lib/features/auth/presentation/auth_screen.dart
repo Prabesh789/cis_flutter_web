@@ -1,3 +1,6 @@
+import 'package:auto_route/src/router/auto_router_x.dart';
+import 'package:cis_project/app_setup/route/app_route.dart';
+import 'package:cis_project/core/responsive.dart';
 import 'package:cis_project/core/widgets/custom_button.dart';
 import 'package:cis_project/core/widgets/custom_textfield.dart';
 import 'package:cis_project/features/auth/presentation/widgets/login_card.dart';
@@ -49,16 +52,27 @@ class _AuthScreenState extends State<AuthScreen> {
                 SizedBox(width: size.width / 22),
                 SizedBox(
                   width: size.width / 2,
-                  child: const Text(
-                    'Share your thoughts about climate change',
-                    style: TextStyle(
-                      fontFamily: 'Ephesis',
-                      fontSize: 50,
-                      fontWeight: FontWeight.bold,
-                      overflow: TextOverflow.ellipsis,
-                    ),
-                    maxLines: 2,
-                  ),
+                  child: Responsive.isDesktop(context)
+                      ? const Text(
+                          'Share your thoughts about climate change',
+                          style: TextStyle(
+                            fontFamily: 'Ephesis',
+                            fontSize: 50,
+                            fontWeight: FontWeight.bold,
+                            overflow: TextOverflow.ellipsis,
+                          ),
+                          maxLines: 2,
+                        )
+                      : const Text(
+                          'Share your thoughts about climate change',
+                          style: TextStyle(
+                            fontFamily: 'Ephesis',
+                            fontSize: 30,
+                            fontWeight: FontWeight.bold,
+                            overflow: TextOverflow.ellipsis,
+                          ),
+                          maxLines: 2,
+                        ),
                 ),
                 const Spacer(),
                 Padding(
@@ -168,7 +182,7 @@ class _AuthScreenState extends State<AuthScreen> {
               // widget.nameController,
               labelText: 'Full Name',
               prefixIcon: const Icon(
-                Icons.email,
+                Icons.person,
                 color: Colors.grey,
               ),
               focusNode: _nameFocusNode,
@@ -214,7 +228,7 @@ class _AuthScreenState extends State<AuthScreen> {
               // widget.addressController,
               labelText: 'Country',
               prefixIcon: const Icon(
-                Icons.email,
+                Icons.map_outlined,
                 color: Colors.grey,
               ),
               focusNode: _addressFocusNode,
@@ -265,7 +279,7 @@ class _AuthScreenState extends State<AuthScreen> {
             SizedBox(height: size.height / 13),
             CustomButton(
               text: 'Register',
-              onPressed: () {
+              onPressed: () async {
                 setState(() {
                   isRegistered = true;
                 });

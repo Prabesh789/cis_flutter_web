@@ -1,3 +1,4 @@
+import 'package:cis_project/app_setup/route/app_route.dart';
 import 'package:cis_project/core/widgets/custom_button.dart';
 import 'package:cis_project/core/widgets/custom_textfield.dart';
 import 'package:flutter/material.dart';
@@ -119,7 +120,9 @@ class _LoginCardState extends State<LoginCard> {
           SizedBox(height: size.height / 13),
           CustomButton(
             text: 'Login',
-            onPressed: () {},
+            onPressed: () {
+              context.router.replaceAll([const DashboardRoute()]);
+            },
           ),
           const SizedBox(height: 20),
           Row(
