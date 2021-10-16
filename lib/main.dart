@@ -1,4 +1,5 @@
 import 'package:cis_project/app_setup/route/app_route.dart';
+import 'package:cis_project/features/splash_screen/splash_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 
@@ -16,11 +17,12 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final _appRouter = AppRouter();
-    return MaterialApp.router(
+    // final _appRouter = AppRouter();
+    return const MaterialApp(
       debugShowCheckedModeBanner: false,
-      routerDelegate: _appRouter.delegate(),
-      routeInformationParser: _appRouter.defaultRouteParser(),
+      // routerDelegate: _appRouter.delegate(),
+      // routeInformationParser: _appRouter.defaultRouteParser(),
+      home: SplashScreen(),
     );
   }
 }
