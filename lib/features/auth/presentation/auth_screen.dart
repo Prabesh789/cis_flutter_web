@@ -1,13 +1,17 @@
-import 'package:auto_route/src/router/auto_router_x.dart';
-import 'package:cis_project/app_setup/route/app_route.dart';
+import 'package:cis_project/core/base_state/base_state.dart';
 import 'package:cis_project/core/responsive.dart';
 import 'package:cis_project/core/widgets/custom_button.dart';
 import 'package:cis_project/core/widgets/custom_textfield.dart';
+import 'package:cis_project/features/auth/application/auth_controller.dart';
 import 'package:cis_project/features/auth/presentation/widgets/login_card.dart';
-import 'package:cis_project/features/auth/presentation/widgets/register_card.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:hooks_riverpod/hooks_riverpod.dart';
+
+final getAuthController =
+    StateNotifierProvider.autoDispose<AuthController, BaseState>(
+        authController);
 
 class AuthScreen extends StatefulHookWidget {
   const AuthScreen({Key? key}) : super(key: key);

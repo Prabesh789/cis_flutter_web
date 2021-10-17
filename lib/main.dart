@@ -1,4 +1,3 @@
-import 'package:cis_project/app_setup/route/app_route.dart';
 import 'package:cis_project/features/splash_screen/splash_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';

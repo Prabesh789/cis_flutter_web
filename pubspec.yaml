@@ -43,6 +43,8 @@ dependencies:
   dio: ^4.0.0
   freezed_annotation: ^0.14.2
   path_provider: ^2.0.2
+  another_flushbar: ^1.10.24
+  http: ^0.13.4
 
 dev_dependencies:
   flutter_test:

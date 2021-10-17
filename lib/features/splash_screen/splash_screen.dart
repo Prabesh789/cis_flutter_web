@@ -1,4 +1,3 @@
-import 'package:cis_project/app_setup/route/app_route.dart';
 import 'package:cis_project/features/auth/presentation/auth_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
